@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/static/css/main.53ae616c.css",
+    "main.js": "/static/js/main.117e83ee.js",
+    "static/media/milehighmashuprecord.webm": "/static/media/milehighmashuprecord.9b28edd94bcd54e40b24.webm",
+    "static/media/adenverrecord.webm": "/static/media/adenverrecord.83fb5eb3ae102caea476.webm",
+    "static/media/psprecord.webm": "/static/media/psprecord.d4b5d5fc430f980cd66a.webm",
+    "static/media/rangerrecord.webm": "/static/media/rangerrecord.6eb34dbbf35c0f8feac0.webm",
+    "static/media/fantasyrecord-2.webm": "/static/media/fantasyrecord-2.b78f5970c17e66ce9191.webm",
+    "static/media/portrecord.webm": "/static/media/portrecord.08247197d65299c1100a.webm",
+    "static/media/jbrecording.webm": "/static/media/jbrecording.5ef21c2afaf7c3d133ac.webm",
+    "static/media/bootstrap.png": "/static/media/bootstrap.98b713604a8f13f287cb.png",
+    "static/media/shopify.png": "/static/media/shopify.769c63c2be6dc51d6342.png",
+    "static/media/fcpreview-min.jpg": "/static/media/fcpreview-min.64512f8fe2ca3b7649dd.jpg",
+    "static/media/tailwindcss.png": "/static/media/tailwindcss.8863ef24e4d1ea22a679.png",
+    "static/media/html5.png": "/static/media/html5.ebd57ba990346e3989c8.png",
+    "static/media/vite.png": "/static/media/vite.ec532a6ae9e024012c14.png",
+    "static/media/php.png": "/static/media/php.afc2bc2b3520e6765644.png",
+    "static/media/npm.png": "/static/media/npm.3543a7801955e149569b.png",
+    "static/media/nodejs.png": "/static/media/nodejs.0bbb722ac3815828225d.png",
+    "static/media/css3.png": "/static/media/css3.97e9684cfa6138a8b6b5.png",
+    "static/media/react.png": "/static/media/react.fdc7ce7bae6b5ae30bd3.png",
+    "static/media/photoshop.png": "/static/media/photoshop.52bf8dbf4591c51b9e8b.png",
+    "static/media/jquery.png": "/static/media/jquery.6e6bb1dc60cc261d09a5.png",
+    "static/media/wordpress.png": "/static/media/wordpress.94daa36f3f25edb9d823.png",
+    "static/media/python.png": "/static/media/python.d13c85e1d6667bf3d769.png",
+    "static/media/javascript.png": "/static/media/javascript.fbae31d210421c5de744.png",
+    "static/media/github.png": "/static/media/github.7b43776ad020f7e9b51e.png",
+    "static/media/rangerpreview-min.jpg": "/static/media/rangerpreview-min.e48025daf637a642ccba.jpg",
+    "static/media/brentimage.jpg": "/static/media/brentimage.b18c3b8aee72020baf01.jpg",
+    "static/media/Brent_Ogden_Resume.pdf": "/static/media/Brent_Ogden_Resume.6516642b6cefea0c2f7c.pdf",
+    "static/media/Brent_Ogden_Resume.docx": "/static/media/Brent_Ogden_Resume.625a3a19a666a5169291.docx",
+    "static/media/rename.jpg": "/static/media/rename.dd4251557c6aa6d6481f.jpg",
+    "index.html": "/index.html",
+    "main.53ae616c.css.map": "/static/css/main.53ae616c.css.map",
+    "main.117e83ee.js.map": "/static/js/main.117e83ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.53ae616c.css",
+    "static/js/main.117e83ee.js"
+  ]
+}

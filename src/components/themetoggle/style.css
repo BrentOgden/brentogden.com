@@ -1,0 +1,21 @@
+.theme_toggler {
+    background: var(--primary-color);
+    z-index: 999999999;
+    left: 10px;
+    background: var(--primary-color);
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding-left: 10px;
+}
+.preview-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.theme_toggler svg {
+    width: 2em;
+    height: 2em;
+}
