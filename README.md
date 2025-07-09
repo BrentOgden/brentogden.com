@@ -75,4 +75,5 @@ yarn
 ├── .gitignore             # Ignore rules
 ├── tailwind.config.js
 ├── vite.config.js
+├── netlify.toml           # (if you use one)
 └── README.md
