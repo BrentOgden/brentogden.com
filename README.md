@@ -1,41 +1,85 @@
-### Description
+# Brent Ogden Portfolio
 
-A simple portfolio template for developer/designers built with React. 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/REPLACE_WITH_YOUR_BADGE/deploy-status)](https://app.netlify.com/sites/REPLACE_WITH_YOUR_SITE/deploys)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-### [live preview](https://ubaimutl.github.io/react-portfolio/)
+Welcome to my personal portfolio site—showcasing projects, my story, and ways to connect. Built with modern web technologies and deployed on Netlify.
 
-[![react portfoiio](src/assets/images/react%20portfolio%20gif.gif)](https://ubaimutl.github.io/react-portfolio/)
+---
 
-### Features
+## Table of Contents
 
-- Fully Responsive
-- Multi-Page Layout
-- Contact Form With EmailJs
-- React-Bootstrap
-- Edit Content From One Place
+- [Demo](#demo)  
+- [Features](#features)  
+- [Tech Stack](#tech-stack)  
+- [Getting Started](#getting-started)  
+  - [Prerequisites](#prerequisites)  
+  - [Installation](#installation)  
+  - [Running Locally](#running-locally)  
+  - [Building for Production](#building-for-production)  
+- [Folder Structure](#folder-structure)  
+- [Deployment](#deployment)  
+- [Contributing](#contributing)  
+- [License](#license)  
+- [Contact](#contact)
 
-### Setup
+---
 
-Get the code
+## Demo
 
-<pre>git clone https://github.com/ubaimutl/react-portfolio.git</pre>
- 
-Install required dependencies
+Live site: https://brentogden.com
 
-<pre>yarn install</pre>
+---
 
+## Features
 
-Start the server
+- **Hero Intro** — A succinct welcome with a brief bio and call-to-action.  
+- **Project Gallery** — Showcase of recent work with images, descriptions, and links.  
+- **My Story** — Background narrative and career journey.  
+- **Let’s Connect** — Social links (LinkedIn, GitHub), resume download, and contact form.  
+- **Responsive Design** — Mobile-first layout that adapts gracefully to all screen sizes.  
 
-<pre>yarn start</pre>
+---
 
-### More
+## Tech Stack
 
-Modify pages content in  `src/content_option.js`.
+- **Framework:** React  
+- **Bundler:** Vite  
+- **Styling:** TailwindCSS  
+- **Animations:** Framer Motion (or CSS transitions)  
+- **Forms & Links:** React Router, React Hook Form (if applicable)  
+- **Deployment:** Netlify  
 
-### Thanks
+---
 
-If you like this portfolio template don't forget give it a ⭐ 
-# bogden-portfolio
-# brentogden-portfolio
-# brentogden-portfolio
+## Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 16.x  
+- npm or Yarn  
+
+### Installation
+
+```bash
+git clone https://github.com/your-username/brentogden-portfolio.git
+cd brentogden-portfolio
+npm install
+# or
+yarn
+
+### Folder Structure
+
+.
+├── public/                # Static assets (favicon, robots.txt)
+├── src/
+│   ├── assets/            # Images, icons, logos
+│   ├── components/        # Reusable UI components (Header, Footer, Gallery, etc.)
+│   ├── pages/             # Sections (Home, Projects, Story, Connect)
+│   ├── styles/            # Tailwind config, global CSS
+│   ├── App.jsx            # Routes & layout
+│   └── main.jsx           # Application entrypoint
+├── .gitignore             # Ignore rules
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
