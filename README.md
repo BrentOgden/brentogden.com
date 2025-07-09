@@ -59,11 +59,11 @@ bash
 git clone https://github.com/your-username/brentogden-portfolio.git
 cd brentogden-portfolio
 npm install
-# or
+or
 yarn
 
 ### Folder Structure
-
+.
 ├── public/                # Static assets (favicon, robots.txt)
 ├── src/
 │   ├── assets/            # Images, icons, logos
