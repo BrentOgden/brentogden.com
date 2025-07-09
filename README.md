@@ -1,8 +1,5 @@
 # Brent Ogden Portfolio
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/REPLACE_WITH_YOUR_BADGE/deploy-status)](https://app.netlify.com/sites/REPLACE_WITH_YOUR_SITE/deploys)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
 Welcome to my personal portfolio site—showcasing projects, my story, and ways to connect. Built with modern web technologies and deployed on Netlify.
 
 ---
@@ -18,10 +15,7 @@ Welcome to my personal portfolio site—showcasing projects, my story, and ways 
   - [Running Locally](#running-locally)  
   - [Building for Production](#building-for-production)  
 - [Folder Structure](#folder-structure)  
-- [Deployment](#deployment)  
-- [Contributing](#contributing)  
-- [License](#license)  
-- [Contact](#contact)
+
 
 ---
 
@@ -61,7 +55,7 @@ Live site: https://brentogden.com
 
 ### Installation
 
-```bash
+bash
 git clone https://github.com/your-username/brentogden-portfolio.git
 cd brentogden-portfolio
 npm install
@@ -70,7 +64,6 @@ yarn
 
 ### Folder Structure
 
-.
 ├── public/                # Static assets (favicon, robots.txt)
 ├── src/
 │   ├── assets/            # Images, icons, logos
