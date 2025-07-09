@@ -47,7 +47,7 @@ Live site: https://brentogden.com
 - **Bundler:** Vite  
 - **Styling:** TailwindCSS  
 - **Animations:** Framer Motion (or CSS transitions)  
-- **Forms & Links:** React Router, React Hook Form (if applicable)  
+- **Forms & Links:** Netlify Forms
 - **Deployment:** Netlify  
 
 ---
