@@ -55,14 +55,19 @@ Live site: https://brentogden.com
 
 ### Installation
 
+```
 bash
-git clone https://github.com/your-username/brentogden-portfolio.git
-cd brentogden-portfolio
+git clone https://github.com/your-username/brentogden.com.git
+cd brentogden.com
 npm install
 or
 yarn
+```
 
 ### Folder Structure
+
+```
+.
 .
 ├── public/                # Static assets (favicon, robots.txt)
 ├── src/
