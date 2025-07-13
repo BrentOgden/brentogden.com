@@ -74,7 +74,6 @@ yarn
 │   ├── assets/            # Images, icons, logos
 │   ├── components/        # Reusable UI components (Header, Footer, Gallery, etc.)
 │   ├── pages/             # Sections (Home, Projects, Story, Connect)
-│   ├── styles/            # Tailwind config, global CSS
 │   ├── App.jsx            # Routes & layout
 │   └── main.jsx           # Application entrypoint
 ├── .gitignore             # Ignore rules

@@ -159,8 +159,8 @@ const skills = [{
     },
     {
         name: "TailwindCSS",
-        experience: "1",
-        proficiency: "Beginner",
+        experience: "2",
+        proficiency: "Intermediate",
         imageUrl: tailwindcss,
     },
     {
@@ -189,7 +189,7 @@ const skills = [{
     },
     {
         name: "Vite",
-        experience: "4",
+        experience: "6",
         proficiency: "Intermediate",
         imageUrl: vite,
     },
@@ -248,7 +248,7 @@ const dataportfolio = [{
         img: "https://i.ibb.co/Kx3h1rf/portfolio.jpg",
         video: portfolioVid,
         description: "The first portfolio site that I built 6 years ago as a one page, highly-visual showcase of my work.",
-        link: "https://milehighmashup.com/portfolio/",
+        link: "",
     },
     {
         img: ranger,
@@ -275,10 +275,12 @@ const dataportfolio = [{
         link: "https://www.a-denverroofing.com/residential-roofing-lp",
     },
     // {
-    //     img: rename,
-    //     description: "Python desktop application built for Legal Department to rename PDFs and DOC files using OCR and ML.",
-    //     link: "https://github.com/BrentOgden/ReName-main",
+    //     img: '',
+    //     video: denverSocialsVid,
+    //     description: "Landing page for a local non-profit that hosts networking events and meetups with the proceeds going to local causes. Built in React using TailwindsCSS.",
+    //     link: "https://denversocials.com",
     // },
+  
     
     
     {
