@@ -23,6 +23,7 @@ import milehighmashupVid from './assets/videos/milehighmashuprecord.webm'
 import jbVid from './assets/videos/jbrecording.webm'
 import rangerVid from './assets/videos/rangerrecord.webm'
 import pspVid from './assets/videos/psprecord.webm'
+import denverSocialsVid from './assets/videos/denversocialsrecord.webm'
 import rename from './assets/images/rename.jpg'
 import adenverVid from './assets/videos/adenverrecord.webm'
 import resumeWord from './assets/Brent_Ogden_Resume.docx'
@@ -229,38 +230,12 @@ const services = [{
     },
 ];
 
-const dataportfolio = [{
-    
-        img: fantasy,
-        video: fantasyVid,
-        description: "A companion site for the two fantasy football leagues that I run - built in React with TailwindCSS.",
-        link: "https://fantasycentral.co/",
-    },
-    {
-        img: "https://i.ibb.co/1MBnX6r/jbsimplyclean.jpg",
-        video: jbVid,
-        description: "I built this professional, fully-responsive site for a friend's business. It has user account creation, password reset, and email functionality.",
-        link: "https://jbsimplyclean.com/",
-    },
-    
-    {
-        
-        img: "https://i.ibb.co/Kx3h1rf/portfolio.jpg",
-        video: portfolioVid,
-        description: "The first portfolio site that I built 6 years ago as a one page, highly-visual showcase of my work.",
-        link: "",
-    },
-    {
-        img: ranger,
-        video: rangerVid,
-        description: "Built in React using TailwindCSS, this is a site I built for someone who breeds Golden Retrievers.",
-        link: "https://www.rangergoldenstud.com",
-    },
+const dataportfolio = [
     {
         img: '',
-        video: pspVid,
-        description: "Site for a consulting firm that needed a modern refresh. Incorporates modern design, parallax scrolling and animations.",
-        link: "https://www.pspcompass.com",
+        video: denverSocialsVid,
+        description: "Landing page for a local non-profit that hosts networking events and meetups with the proceeds going to local causes. Built in React using TailwindsCSS.",
+        link: "https://denversocials.com",
     },
     {
         img: '',
@@ -269,17 +244,47 @@ const dataportfolio = [{
         link: "https://www.milehighmashup.com",
     },
     {
+    
+        img: fantasy,
+        video: fantasyVid,
+        description: "A companion site for the two fantasy football leagues that I run - built in React with TailwindCSS.",
+        link: "https://fantasycentral.co/",
+    },
+    {
+        img: '',
+        video: pspVid,
+        description: "Site for a consulting firm that needed a modern refresh. Incorporates modern design, parallax scrolling and animations.",
+        link: "https://www.pspcompass.com",
+    },
+    
+    {
         img: '',
         video: adenverVid,
         description: "WordPress landing page that was built as part of a large Denver-based roofing company's corporate site. It includes parallax effects and on-page form implementation.",
         link: "https://www.a-denverroofing.com/residential-roofing-lp",
     },
-    // {
-    //     img: '',
-    //     video: denverSocialsVid,
-    //     description: "Landing page for a local non-profit that hosts networking events and meetups with the proceeds going to local causes. Built in React using TailwindsCSS.",
-    //     link: "https://denversocials.com",
-    // },
+    {
+        img: "https://i.ibb.co/1MBnX6r/jbsimplyclean.jpg",
+        video: jbVid,
+        description: "I built this professional, fully-responsive site for a friend's business. It has user account creation, password reset, and email functionality.",
+        link: "https://jbsimplyclean.com/",
+    },
+    {
+        img: ranger,
+        video: rangerVid,
+        description: "Built in React using TailwindCSS, this is a site I built for someone who breeds Golden Retrievers.",
+        link: "https://www.rangergoldenstud.com",
+    },
+    {
+        
+        img: "https://i.ibb.co/Kx3h1rf/portfolio.jpg",
+        video: portfolioVid,
+        description: "The first portfolio site that I built 6 years ago as a one page, highly-visual showcase of my work.",
+        link: "",
+    },
+    
+    
+    
   
     
     

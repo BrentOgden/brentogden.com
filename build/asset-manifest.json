@@ -1,12 +1,13 @@
 {
   "files": {
     "main.css": "/static/css/main.53ae616c.css",
-    "main.js": "/static/js/main.0eb34472.js",
+    "main.js": "/static/js/main.1ed47af0.js",
     "static/media/milehighmashuprecord.webm": "/static/media/milehighmashuprecord.9b28edd94bcd54e40b24.webm",
     "static/media/adenverrecord.webm": "/static/media/adenverrecord.83fb5eb3ae102caea476.webm",
     "static/media/psprecord.webm": "/static/media/psprecord.d4b5d5fc430f980cd66a.webm",
     "static/media/rangerrecord.webm": "/static/media/rangerrecord.6eb34dbbf35c0f8feac0.webm",
     "static/media/fantasyrecord-2.webm": "/static/media/fantasyrecord-2.b78f5970c17e66ce9191.webm",
+    "static/media/denversocialsrecord.webm": "/static/media/denversocialsrecord.e18f9a61cc13021bec7d.webm",
     "static/media/portrecord.webm": "/static/media/portrecord.08247197d65299c1100a.webm",
     "static/media/jbrecording.webm": "/static/media/jbrecording.5ef21c2afaf7c3d133ac.webm",
     "static/media/bootstrap.png": "/static/media/bootstrap.98b713604a8f13f287cb.png",
@@ -33,10 +34,10 @@
     "static/media/rename.jpg": "/static/media/rename.dd4251557c6aa6d6481f.jpg",
     "index.html": "/index.html",
     "main.53ae616c.css.map": "/static/css/main.53ae616c.css.map",
-    "main.0eb34472.js.map": "/static/js/main.0eb34472.js.map"
+    "main.1ed47af0.js.map": "/static/js/main.1ed47af0.js.map"
   },
   "entrypoints": [
     "static/css/main.53ae616c.css",
-    "static/js/main.0eb34472.js"
+    "static/js/main.1ed47af0.js"
   ]
 }
