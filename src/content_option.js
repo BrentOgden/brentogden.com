@@ -28,6 +28,7 @@ import rename from './assets/images/rename.jpg'
 import adenverVid from './assets/videos/adenverrecord.webm'
 import resumeWord from './assets/Brent_Ogden_Resume.docx'
 import resumePDF from './assets/Brent_Ogden_Resume.pdf'
+import sustainableVid from './assets/videos/sustainablegeorecord.webm'
 
 const logotext = "BRENT OGDEN";
 
@@ -247,7 +248,7 @@ const dataportfolio = [
     
         img: fantasy,
         video: fantasyVid,
-        description: "A companion site for the two fantasy football leagues that I run - built in React with TailwindCSS.",
+        description: "A companion site for the two fantasy football leagues that I run - built in React with TailwindsCSS.",
         link: "https://fantasycentral.co/",
     },
     {
@@ -255,6 +256,12 @@ const dataportfolio = [
         video: pspVid,
         description: "Site for a consulting firm that needed a modern refresh. Incorporates modern design, parallax scrolling and animations.",
         link: "https://www.pspcompass.com",
+    },
+    {
+        img: '',
+        video: sustainableVid,
+        description: "Site that was originally built using GoDaddy's web builder. I rebuilt the site from scratch using React and TailwindsCSS to match the old site exactly with pixel-perfect accuracy.",
+        link: "https://www.sustainablegeospatial.com",
     },
     
     {
