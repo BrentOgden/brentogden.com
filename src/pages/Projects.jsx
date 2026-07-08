@@ -67,9 +67,9 @@ export default function Projects() {
           Selected work
         </h1>
         <p className="text-md text-slate-300">
-          A deeper look at the apps, tools, and sites I&apos;ve built. I&apos;ve
+          A deeper look at a few of the apps, tools, and sites I&apos;ve built. I&apos;ve
           focused on projects where I owned the front-end experience and worked
-          closely with stakeholders to ship real outcomes—not just prototypes.
+          closely with stakeholders to ship real outcomes — not just prototypes.
         </p>
       </GlassSection>
 

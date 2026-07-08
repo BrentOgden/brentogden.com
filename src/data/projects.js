@@ -15,6 +15,8 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'Netlify', 'Forms'],
     liveUrl: 'https://denversocials.com',
     thumbnail: '/thumbs/denver-socials.png',
+    // EXAMPLE: Using absolute web URLs (e.g., from Unsplash or your own CDN/hosting) instead of local paths
+    screenshots: [],
     caseStudy: {
       summary:
         'A modern landing page experience to highlight various Denver Socials events and their impact on the non-profits that they support.',
@@ -34,56 +36,62 @@ export const projects = [
       ],
     },
   },
-{
-  id: 'b-squared-solutions',
-  slug: 'b-squared-solutions',
-  title: 'B Squared Solutions',
-  type: 'Business/Consulting Site · React · Tailwind · Parallax · Animations',
-  year: '2025',
-  description:
-    'A polished business and consulting site built with React and Tailwind CSS, featuring parallax visuals, smooth animations, reusable components, and a modern section-based layout.',
-  impact:
-    'Elevated the brand with a fast, professional, highly-visual site built on reusable components—making future additions and pages quick to build while ensuring visual consistency.',
-  role: 'Architecture · UI/UX · Front-End Development · Component Engineering',
-  tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Reusable Components'],
-  liveUrl: 'https://bsquaredsolutions.io',
-  thumbnail: '/thumbs/b-squared-solutions.png',
-
-  caseStudy: {
-    summary:
-      'A bold, modern consulting site built from the ground up using React and Tailwind. The site delivers a structured, animated, and visually engaging experience designed to showcase services, projects, and personal brand credibility.',
-
-    problem: [
-      'The previous website experience lacked a cohesive brand identity and did not reflect the polish or capability of the services offered.',
-      'There was no reusable design system or component structure, making new pages and updates slow and inconsistent.',
-      'The site needed a more modern look—one that established credibility quickly for clients viewing portfolio work or service offerings.',
+  {
+    id: 'b-squared-solutions',
+    slug: 'b-squared-solutions',
+    title: 'B Squared Solutions',
+    type: 'Business/Consulting Site · React · Tailwind · Parallax · Animations',
+    year: '2025',
+    description:
+      'A polished business and consulting site built with React and Tailwind CSS, featuring parallax visuals, smooth animations, reusable components, and a modern section-based layout.',
+    impact:
+      'Elevated the brand with a fast, professional, highly-visual site built on reusable components—making future additions and pages quick to build while ensuring visual consistency.',
+    role: 'Architecture · UI/UX · Front-End Development · Component Engineering',
+    tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Reusable Components'],
+    liveUrl: 'https://bsquaredsolutions.io',
+    thumbnail: '/thumbs/b-squared-solutions.png',
+    screenshots: [
+      { url: '/screenshots/bsquared1.jpeg', caption: '' },
+       { url: '/screenshots/bsquared2.jpeg', caption: '' },
+        { url: '/screenshots/bsquared3.jpeg', caption: '' },
+         { url: '/screenshots/bsquared4.jpeg', caption: '' },
+          { url: '/screenshots/bsquared5.jpeg', caption: '' },
+           { url: '/screenshots/bsquared6.jpeg', caption: '' },
+            { url: '/screenshots/bsquared7.jpeg', caption: '' },
+             { url: '/screenshots/bsquared8.jpeg', caption: '' },
+              { url: '/screenshots/bsquared9.jpeg', caption: '' },
+      
     ],
-
-    approach: [
-      'Architected a fully responsive, section-based React layout built with Tailwind CSS for rapid iteration and visual consistency.',
-      'Built reusable UI components—Glass cards, animated sections, parallax hero, skill grid, testimonials, timeline, and project cards.',
-      'Implemented smooth scroll-based animations and micro-interactions to create a high-end, modern consulting aesthetic.',
-      'Added a scalable project showcase structure with thumbnails, case studies, filtering, and rich interactive detail pages.',
-      'Optimized for speed, accessibility, and clarity—prioritizing fast load times and clean navigation across all devices.',
-    ],
-
-    outcome: [
-      'Launched a professional-grade consulting/portfolio platform that clearly communicates expertise across React, UI/UX, and full front-end engineering.',
-      'Created a reusable design system that will support future expansions (blog, package pages, client dashboards, long-form case studies).',
-      'Improved brand credibility, helping prospective clients understand services, past work, and technical skillset at a glance.',
-      'Delivered a site architecture that can scale as the business grows—new pages, new packages, and new case studies can be added effortlessly.',
-    ],
-
-    highlights: [
-      'Framer-style animated background with glassmorphic UI system.',
-      'Reusable, fully responsive component library built in React + Tailwind.',
-      'Interactive project gallery with case-study level detail pages.',
-      'Parallax hero section, smooth scroll animations, and dynamic skill grid.',
-      'High-performance build optimized for Lighthouse, SEO, and accessibility.',
-    ],
+    caseStudy: {
+      summary:
+        'A bold, modern consulting site built from the ground up using React and Tailwind. The site delivers a structured, animated, and visually engaging experience designed to showcase services, projects, and personal brand credibility.',
+      problem: [
+        'The previous website experience lacked a cohesive brand identity and did not reflect the polish or capability of the services offered.',
+        'There was no reusable design system or component structure, making new pages and updates slow and inconsistent.',
+        'The site needed a more modern look—one that established credibility quickly for clients viewing portfolio work or service offerings.',
+      ],
+      approach: [
+        'Architected a fully responsive, section-based React layout built with Tailwind CSS for rapid iteration and visual consistency.',
+        'Built reusable UI components—Glass cards, animated sections, parallax hero, skill grid, testimonials, timeline, and project cards.',
+        'Implemented smooth scroll-based animations and micro-interactions to create a high-end, modern consulting aesthetic.',
+        'Added a scalable project showcase structure with thumbnails, case studies, filtering, and rich interactive detail pages.',
+        'Optimized for speed, accessibility, and clarity—prioritizing fast load times and clean navigation across all devices.',
+      ],
+      outcome: [
+        'Launched a professional-grade consulting/portfolio platform that clearly communicates expertise across React, UI/UX, and full front-end engineering.',
+        'Created a reusable design system that will support future expansions (blog, package pages, client dashboards, long-form case studies).',
+        'Improved brand credibility, helping prospective clients understand services, past work, and technical skillset at a glance.',
+        'Delivered a site architecture that can scale as the business grows—new pages, new packages, and new case studies can be added effortlessly.',
+      ],
+      highlights: [
+        'Framer-style animated background with glassmorphic UI system.',
+        'Reusable, fully responsive component library built in React + Tailwind.',
+        'Interactive project gallery with case-study level detail pages.',
+        'Parallax hero section, smooth scroll animations, and dynamic skill grid.',
+        'High-performance build optimized for Lighthouse, SEO, and accessibility.',
+      ],
+    },
   },
-},
-
   {
     id: 'mile-high-mashup',
     slug: 'mile-high-mashup',
@@ -98,6 +106,16 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'REST APIs'],
     liveUrl: 'https://www.milehighmashup.com',
     thumbnail: '/thumbs/mile-high-mashup.png',
+    screenshots: [
+      { url: '/screenshots/mashup1.jpeg', caption: '' },
+       { url: '/screenshots/mashup2.jpeg', caption: ' '},
+        { url: '/screenshots/mashup3.jpeg', caption: ' '},
+         { url: '/screenshots/mashup4.jpeg', caption: ' '},
+          { url: '/screenshots/mashup5.jpeg', caption: '' },
+           { url: '/screenshots/mashup6.jpeg', caption: '' },
+            { url: '/screenshots/mashup7.jpeg', caption: '' },
+            
+    ],
     caseStudy: {
       summary:
         'A Denver sports hub that aggregates scores, news, facts and videos for local pro sports teams.',
@@ -115,7 +133,6 @@ export const projects = [
       ],
     },
   },
-
   {
     id: 'fantasycentral',
     slug: 'fantasycentral',
@@ -130,6 +147,16 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'Vite'],
     liveUrl: 'https://fantasycentral.co',
     thumbnail: '/thumbs/fantasycentral.png',
+    screenshots: [
+       { url: '/screenshots/fc1.jpeg', caption: '' },
+       { url: '/screenshots/fc2.jpeg', caption: '' },
+        { url: '/screenshots/fc3.jpeg', caption: '' },
+         { url: '/screenshots/fc4.jpeg', caption: '' },
+          { url: '/screenshots/fc5.jpeg', caption: '' },
+           { url: '/screenshots/fc6.jpeg', caption: '' },
+            { url: '/screenshots/fc7.jpeg', caption: '' },
+            { url: '/screenshots/fc8.jpeg', caption: '' },
+    ],
     caseStudy: {
       summary:
         'A dedicated hub for members of our fantasy leagues to view records, league history, and historical stats in one place.',
@@ -147,7 +174,6 @@ export const projects = [
       ],
     },
   },
-
   {
     id: 'psp-compass',
     slug: 'psp-compass',
@@ -162,6 +188,7 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'Scroll Animations'],
     liveUrl: 'https://www.pspcompass.com',
     thumbnail: '/thumbs/psp-compass.png',
+    screenshots: [],
     caseStudy: {
       summary:
         'A full visual refresh for a consulting firm to better match their expertise and message.',
@@ -178,7 +205,6 @@ export const projects = [
       ],
     },
   },
-
   {
     id: 'sustainable-geospatial',
     slug: 'sustainable-geospatial',
@@ -191,8 +217,9 @@ export const projects = [
       'Migrated a fragile, builder-based site into a modern stack while preserving the visual brand users were used to.',
     role: 'Rebuild · Front-End Engineering · Pixel-Perfect Implementation',
     tech: ['React', 'Tailwind CSS'],
-    liveUrl: 'https://www.sustainablegeospatial.com',
+    liveUrl: '#',
     thumbnail: '/thumbs/sustainable-geospatial.png',
+    screenshots: [],
     caseStudy: {
       summary:
         'A careful rebuild of an existing site to remove platform limitations without changing the user-facing design.',
@@ -209,7 +236,6 @@ export const projects = [
       ],
     },
   },
-
   {
     id: 'a-denver-roofing',
     slug: 'a-denver-roofing',
@@ -224,6 +250,7 @@ export const projects = [
     tech: ['WordPress', 'Custom Theme', 'Parallax', 'Forms'],
     liveUrl: 'https://www.a-denverroofing.com',
     thumbnail: '/thumbs/a-denver-roofing.png',
+    screenshots: [],
     caseStudy: {
       summary:
         'A visually engaging landing page for a major roofing company, designed to convert visitors into leads.',
@@ -240,7 +267,6 @@ export const projects = [
       ],
     },
   },
-
   {
     id: 'jb-simply-clean',
     slug: 'jb-simply-clean',
@@ -255,6 +281,14 @@ export const projects = [
     tech: ['React', 'Tailwind CSS', 'Node/Express', 'Email Integration'],
     liveUrl: 'https://jbsimplyclean.com',
     thumbnail: '/thumbs/jb-simply-clean.png',
+    screenshots: [
+       { url: '/screenshots/jb1.jpeg', caption: '' },
+       { url: '/screenshots/jb2.jpeg', caption: '' },
+        { url: '/screenshots/jb3.jpeg', caption: '' },
+         { url: '/screenshots/jb4.jpeg', caption: '' },
+          { url: '/screenshots/jb5.jpeg', caption: '' },
+           { url: '/screenshots/jb6.jpeg', caption: '' },
+    ],
     caseStudy: {
       summary:
         'A small business site with just enough application logic to support user accounts and communication.',
@@ -271,7 +305,6 @@ export const projects = [
       ],
     },
   },
-
   {
     id: 'ranger-golden-stud',
     slug: 'ranger-golden-stud',
@@ -286,6 +319,13 @@ export const projects = [
     tech: ['React', 'Tailwind CSS'],
     liveUrl: 'https://www.rangergoldenstud.com',
     thumbnail: '/thumbs/ranger-golden-stud.png',
+    screenshots: [
+      { url: '/screenshots/ranger1.jpeg', caption: '' },
+       { url: '/screenshots/ranger2.jpeg', caption: '' },
+        { url: '/screenshots/ranger3.jpeg', caption: '' },
+         { url: '/screenshots/ranger4.jpeg', caption: '' },
+          { url: '/screenshots/ranger5.jpeg', caption: '' },
+    ],
     caseStudy: {
       summary:
         'A calm and friendly brand site for a client offering Golden Retriever breeding services.',
@@ -301,34 +341,5 @@ export const projects = [
         'Helped drive qualified inquiries and gave owners a link they could confidently share, while emphasizing the pedigree and qualities of Ranger.',
       ],
     },
-  },
-
-  // {
-  //   id: 'original-portfolio',
-  //   slug: 'original-portfolio',
-  //   title: 'Original One-Page Portfolio',
-  //   type: 'Legacy Portfolio · One Page',
-  //   year: '~2019',
-  //   description:
-  //     'The first portfolio site that I built 6 years ago as a one-page, highly visual showcase of my work.',
-  //   impact:
-  //     'Served as an early playground for learning layout, animation, and portfolio storytelling.',
-  //   role: 'Design · Development',
-  //   tech: ['HTML', 'CSS', 'JavaScript'],
-  //   liveUrl: null,
-  //   thumbnail: '/thumbs/original-portfolio.png',
-  //   caseStudy: {
-  //     summary:
-  //       'An early experiment in building a one-page portfolio with bold visuals.',
-  //     problem: [
-  //       'Needed a way to show work in a single, scrollable experience without a complex CMS.',
-  //     ],
-  //     approach: [
-  //       'Structured content into large, full-width sections with strong visual hierarchy.',
-  //     ],
-  //     outcome: [
-  //       'Became the foundation for later portfolio iterations, including your current site.',
-  //     ],
-  //   },
-  // },
-]
+  }
+];
