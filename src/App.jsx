@@ -9,6 +9,7 @@ import ProjectDetail from './pages/ProjectDetail'
 import About from './pages/About'
 import ScrollToTop from './components/ScrollToTop'
 import ContactForm from './pages/ContactForm'
+// import Projects2 from './pages/projects_new'
 
 export default function App() {
     return (
@@ -19,6 +20,7 @@ export default function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/projects" element={<Projects />} />
+                    {/* <Route path="/projects_new" element={<Projects2 />} /> */}
                     <Route path="/projects/:id" element={<ProjectDetail />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contactform" element={<ContactForm />} />

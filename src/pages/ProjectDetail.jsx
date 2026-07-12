@@ -81,8 +81,11 @@ export default function ProjectDetail() {
   return (
     <>
       {/* Header / summary with screenshot background */}
+      <div className="p-4 flex flex-col items-center bg-slate-800/50 gap-4 text-center">
+      <h1 className="text-4xl text-center font-bold text-white text-shadow-white shadow-lg">CASE STUDY -  {title}</h1>
+      </div>
       <GlassSection
-        className="bg-white/5 md:rounded-sm text-md relative border-slate-900 overflow-hidden shadow-md shadow-brand/80"
+        className="bg-white/5 h-64 md:rounded-sm text-md relative border-slate-900 overflow-hidden shadow-md shadow-brand/80"
         style={{
           backgroundImage: `url(${thumbnail})`,
           backgroundSize: 'cover',
@@ -91,27 +94,27 @@ export default function ProjectDetail() {
         }}
       >
         {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-slate-800 md:bg-slate-900/90" />
+        <div className="absolute inset-0 bg-slate-800 md:bg-slate-900/20" />
 
         {/* Content wrapper to keep text above overlay */}
         <div className="relative z-10">
           <button
             type="button"
             onClick={() => navigate(-1)}
-            className="mb-4 inline-flex items-center gap-2 text-md md:text-sm text-brand hover:text-brandAlt"
+            className="mb-4 inline-flex items-center gap-2 text-md md:text-sm rounded-lg bg-brand/80 text-white p-4 hover:text-white"
           >
             <FaArrowLeft />
             Back
           </button>
 
-          <p className="mb-1 text-md font-semibold uppercase tracking-[0.25em] text-brandAlt">
+          {/* <p className="mb-1 text-2xl font-semibold uppercase tracking-[0.25em] text-brandAlt">
             Case Study
           </p>
           <h1 className="mb-2 text-2xl font-semibold text-slate-90 sm:text-3xl shadow-lg">
             {title}
-          </h1>
+          </h1> */}
 
-          <div className="mb-3 flex flex-wrap items-center gap-3 text-md text-slate-300">
+          {/* <div className="mb-3 flex flex-wrap items-center gap-3 text-md text-slate-300">
             {type && (
               <span className="rounded-full bg-brand/60 px-3 py-1 text-sm">
                 {type}
@@ -136,9 +139,9 @@ export default function ProjectDetail() {
             <p className="max-w-3xl md:text-sm text-md leading-relaxed text-slate-200">
               {summary}
             </p>
-          )}
+          )} */}
 
-          <div className="mt-4 flex flex-wrap items-center gap-2 text-md">
+          {/* <div className="mt-4 flex flex-wrap items-center gap-2 text-md">
             {tech?.map(tag => (
               <span
                 key={tag}
@@ -147,9 +150,9 @@ export default function ProjectDetail() {
                 {tag}
               </span>
             ))}
-          </div>
+          </div> */}
 
-          {liveUrl && liveUrl !== '#' && (
+          {/* {liveUrl && liveUrl !== '#' && (
             <a
               href={liveUrl}
               target="_blank"
@@ -159,13 +162,13 @@ export default function ProjectDetail() {
               View live project
               <FaExternalLinkAlt className="text-md" />
             </a>
-          )}
+          )} */}
 
-          {impact && (
+          {/* {impact && (
             <p className="mt-4 text-md italic text-white/90">
               Impact: {impact}
             </p>
-          )}
+          )} */}
         </div>
       </GlassSection>
 
