@@ -1,16 +1,25 @@
 // src/components/ContactForm.jsx
 import React from 'react'
+import SEO from '../components/SEO'
+import { buildContactSchema, SEO_COPY } from '../config/seo.mjs'
 
 export default function ContactForm({ className = '' }) {
   return (
-    <section
+    <>
+      <SEO
+        title={SEO_COPY.contact.title}
+        description={SEO_COPY.contact.description}
+        path={SEO_COPY.contact.path}
+        structuredData={buildContactSchema()}
+      />
+      <section
       id="contact"
       className={`rounded-3xl border border-brand/50 bg-slate-950/70 p-6 text-sm text-slate-100 shadow-lg backdrop-blur-md sm:p-8 ${className}`}
     >
       <div className="mb-6">
-        <h2 className="mb-2 text-xl font-semibold text-slate-50 sm:text-2xl">
+        <h1 className="mb-2 text-xl font-semibold text-slate-50 sm:text-2xl">
           Let&apos;s connect
-        </h2>
+        </h1>
         <p className="max-w-xl text-sm text-slate-300">
           Have a project, role, or idea you&apos;d like to talk through? Send me a quick
           note and I&apos;ll follow up as soon as I can.
@@ -115,6 +124,7 @@ export default function ContactForm({ className = '' }) {
           </p>
         </div>
       </form>
-    </section>
+      </section>
+    </>
   )
 }

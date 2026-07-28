@@ -3,7 +3,9 @@ import React, { useMemo, useState, useEffect, useCallback } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { FaArrowLeft, FaExternalLinkAlt } from 'react-icons/fa'
 import GlassSection from '../components/GlassSection'
+import SEO from '../components/SEO'
 import { projects } from '../data/projects'
+import { buildProjectDescription, buildProjectSchema } from '../config/seo.mjs'
 
 export default function ProjectDetail() {
   const { id } = useParams()
@@ -55,22 +57,30 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <GlassSection className="bg-white/5 text-md">
-        <button
-          type="button"
-          onClick={() => navigate(-1)}
-          className="mb-4 inline-flex items-center gap-2 text-sm text-brand hover:text-brandAlt"
-        >
-          <FaArrowLeft />
-          Back
-        </button>
-        <h1 className="mb-2 text-xl font-semibold text-slate-50">
-          Project not found
-        </h1>
-        <p className="text-slate-300">
-          I couldn&apos;t find that project. It may have been renamed or removed.
-        </p>
-      </GlassSection>
+      <>
+        <SEO
+          title="Project Not Found | Brent Ogden"
+          description="The requested project case study could not be found on Brent Ogden's portfolio website."
+          path={`/projects/${id}`}
+          robots="noindex, nofollow"
+        />
+        <GlassSection className="bg-white/5 text-md">
+          <button
+            type="button"
+            onClick={() => navigate(-1)}
+            className="mb-4 inline-flex items-center gap-2 text-sm text-brand hover:text-brandAlt"
+          >
+            <FaArrowLeft />
+            Back
+          </button>
+          <h1 className="mb-2 text-xl font-semibold text-slate-50">
+            Project not found
+          </h1>
+          <p className="text-slate-300">
+            I couldn&apos;t find that project. It may have been renamed or removed.
+          </p>
+        </GlassSection>
+      </>
     )
   }
 
@@ -80,6 +90,18 @@ export default function ProjectDetail() {
 
   return (
     <>
+      <SEO
+        title={`${title} Case Study | Brent Ogden`}
+        description={buildProjectDescription(project)}
+        path={`/projects/${project.id}`}
+        image={thumbnail}
+        imageAlt={`${title} website project preview`}
+        imageWidth={1440}
+        imageHeight={900}
+        type="article"
+        structuredData={buildProjectSchema(project)}
+      />
+
       {/* Header / summary with screenshot background */}
       <div className="p-4 flex flex-col items-center bg-slate-800/50 gap-4 text-center">
       <h1 className="text-4xl text-center font-bold text-white text-shadow-white shadow-lg">CASE STUDY -  {title}</h1>
@@ -269,9 +291,10 @@ export default function ProjectDetail() {
                 <div className="relative aspect-[16/10] overflow-hidden rounded-md bg-slate-950">
                   <img
                     src={screenshot.url}
-                    alt={screenshot.caption || `Screenshot ${index + 1}`}
+                    alt={screenshot.caption || `${title} project screenshot ${index + 1}`}
                     className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                     loading="lazy"
+                    decoding="async"
                   />
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center bg-slate-950/60 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
@@ -333,7 +356,7 @@ export default function ProjectDetail() {
           <div className="relative max-h-[80vh] max-w-[90vw] overflow-hidden rounded-xl border border-slate-800 bg-slate-950 shadow-2xl">
             <img
               src={screenshots[currentIndex].url}
-              alt={screenshots[currentIndex].caption || `Screenshot ${currentIndex + 1}`}
+              alt={screenshots[currentIndex].caption || `${title} project screenshot ${currentIndex + 1}`}
               className="h-full max-h-[75vh] w-auto object-contain"
             />
           </div>

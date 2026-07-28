@@ -1,9 +1,11 @@
 // src/pages/About.jsx
 import React, { useEffect, useRef, useState } from 'react'
 import GlassSection from '../components/GlassSection'
+import SEO from '../components/SEO'
 import profile from '../assets/images/brentimage.jpg' // update if different
 import { FaGithub, FaLinkedin, FaEnvelope, FaCheckCircle } from 'react-icons/fa'
 import { FiCpu, FiTrendingUp, FiMapPin } from 'react-icons/fi'
+import { buildAboutSchema, SEO_COPY } from '../config/seo.mjs'
 
 function FadeInLi({ children, index }) {
     const ref = useRef(null)
@@ -109,12 +111,15 @@ function TypewriterParagraph({ text, Icon, delay = 0 }) {
             ref={ref}
             className="text-sm leading-relaxed text-slate-300"
         >
-            {Icon && (
-                <Icon className="mr-2 inline-block align-text-bottom text-brand" />
-            )}
-            {shownText}
-            <span className={`inline-block w-[0.6ch] ${showCursor ? 'opacity-100' : 'opacity-0'} animate-pulse`}>
-                |
+            <span className="sr-only">{text}</span>
+            <span aria-hidden="true">
+                {Icon && (
+                    <Icon className="mr-2 inline-block align-text-bottom text-brand" />
+                )}
+                {shownText}
+                <span className={`inline-block w-[0.6ch] ${showCursor ? 'opacity-100' : 'opacity-0'} animate-pulse`}>
+                    |
+                </span>
             </span>
         </p>
     )
@@ -123,6 +128,15 @@ function TypewriterParagraph({ text, Icon, delay = 0 }) {
 export default function About() {
     return (
         <div className="space-y-12">
+            <SEO
+                title={SEO_COPY.about.title}
+                description={SEO_COPY.about.description}
+                path={SEO_COPY.about.path}
+                image="/og-image.png"
+                imageAlt="Brent Ogden front-end developer portfolio preview"
+                structuredData={buildAboutSchema()}
+            />
+
             {/* Hero */}
             <section className="mt-4 grid px-6 items-center gap-10 md:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
                 <div>
@@ -150,8 +164,12 @@ export default function About() {
                 <div className="justify-self-center">
                     <img
                         src={profile}
-                        alt="Brent Ogden"
+                        alt="Brent Ogden, front-end developer and UX/UI engineer"
                         className="h-96 w-96 rounded-3xl border border-slate-700 object-cover shadow-xl"
+                        width="1130"
+                        height="1508"
+                        fetchPriority="high"
+                        decoding="async"
                     />
                 </div>
             </section>

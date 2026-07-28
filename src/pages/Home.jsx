@@ -20,11 +20,13 @@ import {
   SiShopify,
 } from 'react-icons/si'
 import GlassSection from '../components/GlassSection'
+import SEO from '../components/SEO'
 import ProjectCard from '../components/ProjectCard'
 import resumePDF from '../assets/Brent_Ogden_Frontend_Resume.pdf'
 import { projects } from '../data/projects'
 import { skills } from '../data/skills'
 import { workTimeline } from '../data/experience'
+import { buildHomeSchema, SEO_COPY } from '../config/seo.mjs'
 
 // Map skill.iconKeys → actual icon components
 const skillIconMap = {
@@ -71,6 +73,13 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title={SEO_COPY.home.title}
+        description={SEO_COPY.home.description}
+        path={SEO_COPY.home.path}
+        structuredData={buildHomeSchema()}
+      />
+
       {/* Hero */}
       <section className="grid items-center gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)]">
         {/* Main intro card */}
@@ -103,7 +112,7 @@ export default function Home() {
               View project gallery
             </a>
             <a
-              href="/contactform"
+              href="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-brand/60 bg-slate-950/60 px-4 py-2 text-sm font-medium text-slate-100 transition hover:border-brandAlt hover:bg-slate-900/80"
             >
               Let&apos;s connect

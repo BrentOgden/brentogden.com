@@ -24,9 +24,10 @@ export default function ProjectCard({ project, dense = false }) {
         <div className="mb-3 overflow-hidden rounded-xl border border-white/5 bg-slate-950/40">
           <img
             src={thumbnail}
-            alt={title}
+            alt={`${title} website project preview`}
             className="h-40 w-full object-cover object-top transition duration-300 group-hover:scale-[1.03]"
             loading="lazy"
+            decoding="async"
           />
         </div>
       )}

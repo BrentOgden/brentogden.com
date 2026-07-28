@@ -1,1 +1,15 @@
-/*    /index.html   200
+/contactform /contact 301
+/projects/fantasy-central /projects/fantasycentral 301
+/projects /projects.html 200!
+/about /about.html 200!
+/contact /contact.html 200!
+/projects/denver-socials /projects/denver-socials.html 200!
+/projects/b-squared-solutions /projects/b-squared-solutions.html 200!
+/projects/mile-high-mashup /projects/mile-high-mashup.html 200!
+/projects/fantasycentral /projects/fantasycentral.html 200!
+/projects/psp-compass /projects/psp-compass.html 200!
+/projects/sustainable-geospatial /projects/sustainable-geospatial.html 200!
+/projects/a-denver-roofing /projects/a-denver-roofing.html 200!
+/projects/jb-simply-clean /projects/jb-simply-clean.html 200!
+/projects/ranger-golden-stud /projects/ranger-golden-stud.html 200!
+/* /404.html 404

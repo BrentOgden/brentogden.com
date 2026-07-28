@@ -11,7 +11,7 @@ const LINKS = [
   {
     id: 'contact',
     label: "Let’s Connect",
-    href: '/contactform',
+    href: '/contact',
     type: 'cta',
   },
 ]

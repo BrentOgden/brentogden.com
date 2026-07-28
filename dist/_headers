@@ -1,0 +1,8 @@
+/*.pdf
+  X-Robots-Tag: noindex, noarchive
+
+/assets/*.pdf
+  X-Robots-Tag: noindex, noarchive
+
+/success.html
+  X-Robots-Tag: noindex, nofollow

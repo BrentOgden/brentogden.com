@@ -6,7 +6,11 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "thumbs": "node scripts/generate-thumbnails.mjs"
+    "thumbs": "node scripts/generate-thumbnails.mjs",
+    "seo": "node scripts/generate-seo-pages.mjs",
+    "predev": "npm run seo",
+    "prebuild": "npm run seo && npm run validate:seo",
+    "validate:seo": "node scripts/validate-seo.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

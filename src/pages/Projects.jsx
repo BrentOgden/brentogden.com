@@ -1,4 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import SEO from "../components/SEO";
+import { projects as caseStudyProjects } from "../data/projects";
+import { buildProjectsSchema, SEO_COPY } from "../config/seo.mjs";
 
 const projects = [
   {
@@ -75,7 +78,7 @@ const projects = [
       "A companion site for the two different fantasy football leagues — built in React with Tailwind CSS. It features a multi-page layout with league standings, team awards, and player stats.",
     img: "/thumbs/fantasycentral.png",
     liveUrl: 'https://fantasycentral.co',
-    caseStudyUrl: '/projects/fantasy-central',
+    caseStudyUrl: '/projects/fantasycentral',
     thumbs: [
       "/screenshots/fc1.jpeg",
       "/screenshots/fc2.jpeg",
@@ -311,13 +314,19 @@ export default function PortfolioGallery() {
   };
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-slate-950/50 font-sans text-[hsl(220,15%,92%)]">
+    <div className="min-h-screen overflow-x-hidden bg-slate-950/50 font-sans text-[hsl(220,15%,92%)]">
+      <SEO
+        title={SEO_COPY.projects.title}
+        description={SEO_COPY.projects.description}
+        path={SEO_COPY.projects.path}
+        structuredData={buildProjectsSchema(caseStudyProjects)}
+      />
       <header className="mx-auto max-w-[1400px] px-8 pb-6 pt-12 max-[480px]:px-4">
         <div className="flex flex-col gap-1.5">
-          <div className="flex items-center gap-2 text-2xl font-bold tracking-[-0.03em]">
+          <h1 className="flex items-center gap-2 text-2xl font-bold tracking-[-0.03em]">
             <span className="h-2.5 w-2.5 rounded-full bg-brandAlt shadow-[0_0_12px_hsl(262,80%,65%)]" />
             Select Examples of My Work
-          </div>
+          </h1>
           <p className="pl-[1.35rem] text-[0.9rem] font-normal text-[hsl(220,10%,55%)]">
 A deeper look at a few of the apps, tools, and sites I&apos;ve built. I&apos;ve
           focused on projects where I owned the front-end experience and worked
@@ -370,8 +379,10 @@ A deeper look at a few of the apps, tools, and sites I&apos;ve built. I&apos;ve
               >
                 <img
                   src={project.img}
-                  alt={project.title}
-                  loading="lazy"
+                  alt={`${project.title} website project preview`}
+                  loading={originalIndex < 2 ? "eager" : "lazy"}
+                  fetchPriority={originalIndex < 2 ? "high" : "auto"}
+                  decoding="async"
                   className="block h-full w-full object-cover transition-transform duration-[400ms] ease-out group-hover:scale-[1.06]"
                 />
 
@@ -392,13 +403,18 @@ A deeper look at a few of the apps, tools, and sites I&apos;ve built. I&apos;ve
                       </span>
                     ))}
                   </div>
-                  <button
-                    type="button"
-                    className="self-start translate-y-2 rounded-full bg-brand/60 px-4 py-[0.45rem] text-[0.78rem] font-semibold text-white transition-[transform,background] delay-[120ms] duration-300 hover:bg-[hsl(250, 71%, 46%)] group-hover:translate-y-0 group-focus:translate-y-0"
+                  <a
+                    href={project.caseStudyUrl}
+                    onClick={(event) => {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      openProject(project);
+                    }}
+                    className="self-start translate-y-2 rounded-full bg-brand/60 px-4 py-[0.45rem] text-[0.78rem] font-semibold text-white transition-[transform,background] delay-[120ms] duration-300 hover:bg-[hsl(250,71%,46%)] group-hover:translate-y-0 group-focus:translate-y-0"
                     aria-label={`Open ${project.title} details`}
                   >
                     View →
-                  </button>
+                  </a>
                 </div>
               </article>
             );
@@ -438,7 +454,7 @@ A deeper look at a few of the apps, tools, and sites I&apos;ve built. I&apos;ve
           <div className="clear-both px-7 pb-12 pt-6">
             <img
               src={heroImage}
-              alt={selectedProject.title}
+              alt={`${selectedProject.title} website project preview`}
               className={`mb-6 h-[260px] w-full rounded-xl object-cover transition-opacity duration-200 ${
                 heroVisible ? "opacity-100" : "opacity-0"
               }`}
@@ -454,7 +470,7 @@ A deeper look at a few of the apps, tools, and sites I&apos;ve built. I&apos;ve
                 >
                   <img
                     src={thumb}
-                    alt={`${selectedProject.title} screenshot ${index + 1}`}
+                    alt={`${selectedProject.title} project screenshot ${index + 1}`}
                     className="h-20 w-full cursor-pointer rounded-md border-2 border-transparent object-cover transition-[border-color,transform] duration-200 hover:scale-[1.03] hover:border-brand/60"
                   />
                 </button>
@@ -503,26 +519,26 @@ A deeper look at a few of the apps, tools, and sites I&apos;ve built. I&apos;ve
             </div>
 
             <div className="flex gap-3">
-             <a href={selectedProject.liveUrl} target="_blank" rel="noopener noreferrer">
-                <button
-                  type="button"
-                  className="flex-1 rounded-xl bg-brand/60 px-5 py-3 text-[0.88rem] font-semibold text-white transition-[background,transform] duration-200 hover:-translate-y-px hover:bg-brand/30"
+              {selectedProject.liveUrl && selectedProject.liveUrl !== "#" && (
+                <a
+                  href={selectedProject.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex-1 rounded-xl bg-brand/60 px-5 py-3 text-center text-[0.88rem] font-semibold text-white transition-[background,transform] duration-200 hover:-translate-y-px hover:bg-brand/30"
                 >
                   View Live ↗
-                </button>
-              </a>
-              <a href={selectedProject.caseStudyUrl} target="_blank" rel="noopener noreferrer">
-                <button
-                  type="button"
-                  className="rounded-xl border border-[hsl(220,10%,18%)] bg-transparent px-5 py-3 text-[0.88rem] font-semibold text-[hsl(220,10%,55%)] transition-all duration-200 hover:border-[hsl(220,10%,35%)] hover:text-[hsl(220,15%,92%)]"
-                >
-                  Case Study
-                </button>
+                </a>
+              )}
+              <a
+                href={selectedProject.caseStudyUrl}
+                className="rounded-xl border border-[hsl(220,10%,18%)] bg-transparent px-5 py-3 text-[0.88rem] font-semibold text-[hsl(220,10%,55%)] transition-all duration-200 hover:border-[hsl(220,10%,35%)] hover:text-[hsl(220,15%,92%)]"
+              >
+                Case Study
               </a>
             </div>
           </div>
         )}
       </aside>
-    </main>
+    </div>
   );
 }

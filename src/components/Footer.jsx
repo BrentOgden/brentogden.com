@@ -49,6 +49,7 @@ export default function Footer() {
             <a
               href="https://github.com/BrentOgden"
               target="_blank"
+              aria-label="Brent Ogden on GitHub"
               rel="noreferrer"
               className="text-slate-400 transition hover:text-brandAlt"
             >
@@ -57,6 +58,7 @@ export default function Footer() {
             <a
               href="https://www.linkedin.com/in/brent-ogden-70398012"
               target="_blank"
+              aria-label="Brent Ogden on LinkedIn"
               rel="noreferrer"
               className="text-slate-400 transition hover:text-brandAlt"
             >
