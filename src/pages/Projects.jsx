@@ -76,7 +76,7 @@ const projects = [
     client: "Internal",
     description:
       "A companion site for the two different fantasy football leagues — built in React with Tailwind CSS. It features a multi-page layout with league standings, team awards, and player stats.",
-    img: "/thumbs/fantasycentral.png",
+    img: "/thumbs/fc1.jpeg",
     liveUrl: 'https://fantasycentral.co',
     caseStudyUrl: '/projects/fantasycentral',
     thumbs: [
