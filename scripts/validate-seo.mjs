@@ -53,7 +53,7 @@ function metaContent(html, attribute, key) {
 }
 
 function canonicalHref(html) {
-  return html.match(/<link\s+rel="canonical"\s+href="([^"]+)"\s*\/?>(?:\s*)/i)?.[1] || ''
+  return html.match(/<link\s+rel="canonical"\s+href="([^"]+)"\s*\\/?>(?:\s*)/i)?.[1] || ''
 }
 
 function titleText(html) {
@@ -258,7 +258,7 @@ async function main() {
     'src/pages/Home.jsx',
     'src/pages/About.jsx',
     'src/pages/ContactForm.jsx',
-    'src/pages/projects.jsx',
+    'src/pages/Projects.jsx',
   ]
   for (const sourceFile of sourceFiles) {
     const source = await readFile(join(projectRoot, sourceFile), 'utf8')
@@ -282,7 +282,7 @@ async function main() {
   if (!appSource.includes('path="/contact"')) fail('The canonical /contact route is missing.')
   if (!appSource.includes('path="*"')) fail('The client-side 404 route is missing.')
 
-  const gallerySource = await readFile(join(projectRoot, 'src/pages/projects.jsx'), 'utf8')
+  const gallerySource = await readFile(join(projectRoot, 'src/pages/Projects.jsx'), 'utf8')
   const caseStudyUrls = [...gallerySource.matchAll(/caseStudyUrl:\s*['"]([^'"]+)['"]/g)].map(
     match => match[1],
   )
