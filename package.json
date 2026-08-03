@@ -8,8 +8,9 @@
     "preview": "vite preview",
     "thumbs": "node scripts/generate-thumbnails.mjs",
     "seo": "node scripts/generate-seo-pages.mjs",
-    "predev": "npm run seo",
-    "prebuild": "npm run seo && npm run validate:seo",
+    "seo:fallback": "node scripts/inject-static-content.mjs",
+    "predev": "npm run seo && npm run seo:fallback",
+    "prebuild": "npm run seo && npm run seo:fallback && npm run validate:seo",
     "validate:seo": "node scripts/validate-seo.mjs"
   },
   "dependencies": {
