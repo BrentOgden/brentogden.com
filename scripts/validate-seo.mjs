@@ -53,7 +53,7 @@ function metaContent(html, attribute, key) {
 }
 
 function canonicalHref(html) {
-  return html.match(/<link\s+rel="canonical"\s+href="([^"]+)"\s*\\/?>(?:\s*)/i)?.[1] || ''
+  return html.match(/<link\s+rel="canonical"\s+href="([^"]+)"\s*\/?>(?:\s*)/i)?.[1] || ''
 }
 
 function titleText(html) {
@@ -225,7 +225,7 @@ async function main() {
     }
   }
 
-  const redirects = await readFile(join(publicDirectory, '_redirects'), 'utf8')
+  const redirects = await readFile(join(projectRoot, 'public/_redirects'), 'utf8')
   const forbiddenRedirectPatterns = [
     /^\/index\.html\s/m,
     /^\/projects\/\s/m,
