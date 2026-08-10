@@ -7,7 +7,7 @@ export const WEBSITE_ID = `${SITE_URL}/#website`
 
 export const SEO_COPY = {
   home: {
-    title: 'Brent Ogden | Front-End Developer & UX/UI Engineer',
+    title: 'Brent Ogden | React Front-End Developer & UX/UI Engineer',
     description:
       'Front-end developer and UX/UI engineer near Denver building fast, accessible React, JavaScript, and Tailwind experiences for teams and clients.',
     path: '/',
@@ -51,7 +51,7 @@ export const PERSON_SCHEMA = {
   name: 'Brent Ogden',
   url: `${SITE_URL}/`,
   image: absoluteUrl(PERSON_IMAGE),
-  jobTitle: 'Front-End Developer and UX/UI Engineer',
+  jobTitle: 'React Front-End Developer and UX/UI Engineer',
   sameAs: [
     'https://github.com/BrentOgden',
     'https://www.linkedin.com/in/brent-ogden-70398012',
@@ -185,7 +185,7 @@ export function buildProjectSchema(project) {
     creator: {
       '@id': PERSON_ID,
     },
-    dateCreated: String(project.year || ''),
+    dateCreated: project.year ? `${project.year}-01-01` : undefined,
     keywords: Array.isArray(project.tech) ? project.tech.join(', ') : undefined,
     about: project.type || undefined,
     sameAs:
