@@ -116,7 +116,7 @@ const projects = [
     description:
       "Site that was originally built using GoDaddy\'s web builder. It was rebuilt entirelyfrom scratch using React and Tailwind CSS to match the old site exactly with pixel-perfect accuracy.",
     img: "/thumbs/sustainable-geospatial.png",
-    liveUrl: '#',
+    liveUrl: 'https://sustainable-geo.netlify.app',
     caseStudyUrl: '/projects/sustainable-geospatial',
 
     thumbs: [
