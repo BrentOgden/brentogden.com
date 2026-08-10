@@ -1,6 +1,7 @@
+import { execFileSync } from 'node:child_process'
 import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { dirname, join, resolve } from 'node:path'
-import { fileURLToPath, pathToFileURL } from 'node:url'
+import { fileURLToPath } from 'node:url'
 import {
   absoluteUrl,
   buildAboutSchema,
@@ -19,6 +20,13 @@ const scriptDirectory = dirname(fileURLToPath(import.meta.url))
 const projectRoot = resolve(scriptDirectory, '..')
 const publicDirectory = join(projectRoot, 'public')
 const projectPagesDirectory = join(projectRoot, 'projects')
+
+const ROUTE_SOURCE_FILES = {
+  '/': ['src/pages/Home.jsx', 'src/config/seo.mjs'],
+  '/projects': ['src/pages/Projects.jsx', 'src/data/projects.js', 'src/config/seo.mjs'],
+  '/about': ['src/pages/About.jsx', 'src/config/seo.mjs'],
+  '/contact': ['src/pages/ContactForm.jsx', 'src/config/seo.mjs'],
+}
 
 async function loadProjects() {
   const dataFile = join(projectRoot, 'src/data/projects.js')
@@ -43,6 +51,37 @@ function escapeHtml(value = '') {
 
 function safeJson(value) {
   return JSON.stringify(value).replaceAll('<', '\\u003c')
+}
+
+function getLastModified(sourceFiles = []) {
+  if (!sourceFiles.length) return undefined
+
+  try {
+    const date = execFileSync(
+      'git',
+      ['log', '-1', '--format=%cs', '--', ...sourceFiles],
+      {
+        cwd: projectRoot,
+        encoding: 'utf8',
+        stdio: ['ignore', 'pipe', 'ignore'],
+      },
+    ).trim()
+
+    return /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : undefined
+  } catch {
+    return undefined
+  }
+}
+
+function sitemapEntry(url, lastmod) {
+  return [
+    '  <url>',
+    `    <loc>${url}</loc>`,
+    lastmod ? `    <lastmod>${lastmod}</lastmod>` : null,
+    '  </url>',
+  ]
+    .filter(Boolean)
+    .join('\n')
 }
 
 function routeHtml({
@@ -159,7 +198,7 @@ async function main() {
   await writeRouteFile('index.html', {
     ...SEO_COPY.home,
     schema: buildHomeSchema(),
-    imageAlt: 'Brent Ogden front-end developer portfolio preview',
+    imageAlt: 'Brent Ogden React front-end developer portfolio preview',
     includeNetlifyForm: true,
   })
 
@@ -195,17 +234,23 @@ async function main() {
     })
   }
 
-  const sitemapUrls = [
-    `${SITE_URL}/`,
-    absoluteUrl('/projects'),
-    absoluteUrl('/about'),
-    absoluteUrl('/contact'),
-    ...projects.map(project => absoluteUrl(`/projects/${project.id}`)),
+  const projectLastmod = getLastModified([
+    'src/data/projects.js',
+    'src/pages/ProjectDetail.jsx',
+    'src/config/seo.mjs',
+  ])
+
+  const sitemapEntries = [
+    sitemapEntry(`${SITE_URL}/`, getLastModified(ROUTE_SOURCE_FILES['/'])),
+    sitemapEntry(absoluteUrl('/projects'), getLastModified(ROUTE_SOURCE_FILES['/projects'])),
+    sitemapEntry(absoluteUrl('/about'), getLastModified(ROUTE_SOURCE_FILES['/about'])),
+    sitemapEntry(absoluteUrl('/contact'), getLastModified(ROUTE_SOURCE_FILES['/contact'])),
+    ...projects.map(project =>
+      sitemapEntry(absoluteUrl(`/projects/${project.id}`), projectLastmod),
+    ),
   ]
 
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapUrls
-    .map(url => `  <url>\n    <loc>${url}</loc>\n  </url>`)
-    .join('\n')}\n</urlset>\n`
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries.join('\n')}\n</urlset>\n`
 
   await writeFile(join(publicDirectory, 'sitemap.xml'), sitemap, 'utf8')
 
@@ -228,7 +273,7 @@ async function main() {
     'utf8',
   )
 
-  console.log(`Generated SEO metadata for ${sitemapUrls.length} canonical URLs.`)
+  console.log(`Generated SEO metadata and factual sitemap dates for ${sitemapEntries.length} canonical URLs.`)
 }
 
 main().catch(error => {
