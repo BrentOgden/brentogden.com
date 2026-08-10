@@ -15,7 +15,7 @@ const projects = [
     description:
       "Landing page for a local non-profit that hosts networking events and meetups with the proceeds going to local causes. Built in React using Tailwind CSS.",
     img: "/thumbs/denver-socials.png",
-    liveUrl: 'https://denversocials.com',
+    liveUrl: 'https://denver-socials.netlify.app',
     caseStudyUrl: '/projects/denver-socials',
     thumbs: [
       
